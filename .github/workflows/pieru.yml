@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: "Run slugify"
         id: slugify
-        uses: eltimn/slugify-action@v2
+        uses: gacts/github-slug@v1
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "slug is ${{ steps.slugify.outputs.branch }}, ${{ steps.slugify.outputs.sha }}"
+      - run: echo "slug is ${{ steps.slugify.outputs.branch-name-slug }}, ${{ steps.slugify.outputs.commit-hash }}"
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
