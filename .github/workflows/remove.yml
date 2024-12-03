@@ -1,0 +1,21 @@
+name: Branch Deleted
+on: delete
+jobs:
+  delete:
+    if: github.event.ref_type == 'branch'
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Run slugify"
+        id: slugify
+        uses: gacts/github-slug@v1
+
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      - name: Undeploy
+        run: |
+          pnpx sts deploy --stage ${{ steps.slugify.outputs.branch-name-slug }}
+
+      - name: Clean up
+        run: |
+          echo "Clean up for branch ${{ github.event.ref }}"

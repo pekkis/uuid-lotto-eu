@@ -6,9 +6,5 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "UuidLotto": {
-      "type": "sst.aws.Astro"
-      "url": string
-    }
   }
 }

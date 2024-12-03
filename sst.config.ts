@@ -9,13 +9,13 @@ export default $config({
         },
       },
       name: "uuid-lotto",
-      removal: input?.stage === "production" ? "retain" : "remove",
+      removal: input?.stage === "main" ? "retain" : "remove",
       home: "aws",
     };
   },
   async run() {
     const host = "uuid-lotto.eu";
-    const subdomain = $app.stage === "production" ? "www" : $app.stage;
+    const subdomain = $app.stage === "main" ? "www" : $app.stage;
 
     new sst.aws.Astro("UuidLotto", {
       domain: `${subdomain}.${host}`,
