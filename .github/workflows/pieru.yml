@@ -1,10 +1,20 @@
-on: [push]
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - "**"
 
 jobs:
   pieraise:
     runs-on: ubuntu-latest
     steps:
+      - name: "Run slugify"
+        id: slugify
+        uses: eltimn/slugify-action@v2
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "slug is ${{ steps.slugify.outputs.branch }}, ${{ steps.slugify.outputs.sha }}"
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
