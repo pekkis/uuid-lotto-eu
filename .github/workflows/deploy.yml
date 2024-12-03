@@ -5,6 +5,12 @@ jobs:
   pieraise:
     runs-on: ubuntu-latest
     steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-north-1
       - name: "Run slugify"
         id: slugify
         uses: gacts/github-slug@v1
@@ -12,6 +18,7 @@ jobs:
       - run: echo "slug is ${{ steps.slugify.outputs.branch-name-slug }}, ${{ steps.slugify.outputs.commit-hash }}"
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
       - name: Check out repository code
         uses: actions/checkout@v4
 
