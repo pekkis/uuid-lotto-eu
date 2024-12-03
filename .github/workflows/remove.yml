@@ -29,7 +29,7 @@ jobs:
 
       - name: Undeploy
         run: |
-          pnpx sts deploy --stage ${{ steps.slugify.outputs.branch-name-slug }}
+          pnpx sts remove --stage ${{ steps.slugify.outputs.branch-name-slug }}
 
       - name: Clean up
         run: |
