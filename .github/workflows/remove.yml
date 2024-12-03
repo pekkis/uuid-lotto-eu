@@ -19,6 +19,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "pnpm"
+
       - name: Undeploy
         run: |
           pnpx sts deploy --stage ${{ steps.slugify.outputs.branch-name-slug }}
