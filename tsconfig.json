@@ -5,6 +5,6 @@
     "**/*"
   ],
   "exclude": [
-    "dist"
+    "dist","sst.config.ts"
   ]
 }

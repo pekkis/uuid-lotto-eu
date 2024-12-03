@@ -14,6 +14,12 @@ importers:
       astro:
         specifier: ^4.16.16
         version: 4.16.16(rollup@4.28.0)(typescript@5.7.2)
+      astro-sst:
+        specifier: 2.43.5
+        version: 2.43.5
+      sst:
+        specifier: 3.3.41
+        version: 3.3.41
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -58,6 +64,10 @@ packages:
   '@astrojs/telemetry@3.1.0':
     resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+
+  '@astrojs/webapi@3.0.0':
+    resolution: {integrity: sha512-+/Wruju2Ho99z0jI8zxMFGBkKKG97RzR/srSaColejUDrczkAjR3HjULKTVfDdIpvtvFZLyl7OMBmHKQazfeZg==}
+    deprecated: This package is not used by Astro any more and is no longer maintained. In Astro 3.0 polyfills are part of a core module.
 
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
@@ -306,6 +316,10 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@fastify/busboy@2.1.1':
+    resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
+    engines: {node: '>=14'}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -664,10 +678,16 @@ packages:
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
 
+  astro-sst@2.43.5:
+    resolution: {integrity: sha512-CWSJO5Kdn7B6CI+qvd82T+ldqaI8y5HeQm4U9dGSSZe+v2KtArac94s2PaE27nxMTLy1JNG101cmyZj+1LhdjA==}
+
   astro@4.16.16:
     resolution: {integrity: sha512-H1CttrV6+JFrDBQx0Mcbq5i5AeLhCbztB786+9wEu3svWL/QPNeCGqF0dgNORAYmP+rODGCPu/y9qKSh87iLuA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
+
+  aws4fetch@1.0.20:
+    resolution: {integrity: sha512-/djoAN709iY65ETD6LKCtyyEI04XIBP5xVvfmNxsEP0uJB5tyaGBztSryRr4HqMStr9R06PisQE7m9zDTXKu6g==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -1034,6 +1054,12 @@ packages:
     resolution: {integrity: sha512-UcVfVfaK4Sc4m7X3dUSoHoozQGBEFeDC+zVo06t98xe8CzHSZZBekNXH+tu0NalHolcJ/QAGqS46Hef7QXBIMw==}
     engines: {node: '>=16'}
 
+  jose@4.15.9:
+    resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
+
+  jose@5.2.3:
+    resolution: {integrity: sha512-KUXdbctm1uHVL8BYhnyHkgp3zDX5KW8ZhAKVFEfUbU2P8Alpzjb+48hHvjOdQIyPshoblhzsuqOwEEAbtHVirA==}
+
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -1096,6 +1122,10 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lru-cache@6.0.0:
+    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
+    engines: {node: '>=10'}
 
   magic-string@0.30.14:
     resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
@@ -1266,12 +1296,23 @@ packages:
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
+  object-hash@2.2.0:
+    resolution: {integrity: sha512-gScRMn0bS5fH+IuwyIFgnh9zBdo4DV+6GhygmWM9HyNJSgS0hScp1f5vjtm7oIIOiT9trXrShAkLFSc2IqKNgw==}
+    engines: {node: '>= 6'}
+
+  oidc-token-hash@5.0.3:
+    resolution: {integrity: sha512-IF4PcGgzAr6XXSff26Sk/+P4KZFJVuHAJZj3wgO3vX2bMdNVp/QXTP3P7CEm9V1IdG8lDLY3HhiqpsE/nOwpPw==}
+    engines: {node: ^10.13.0 || >=12.0.0}
+
   onetime@7.0.0:
     resolution: {integrity: sha512-VXJjc87FScF88uafS3JllDgvAm+c/Slfz06lorj2uAY34rlUu0Nt+v8wreiImcrgAjjIHp1rXpTDlLOGw29WwQ==}
     engines: {node: '>=18'}
 
   oniguruma-to-es@0.7.0:
     resolution: {integrity: sha512-HRaRh09cE0gRS3+wi2zxekB+I5L8C/gN60S+vb11eADHUaB/q4u8wGGOX3GvwvitG8ixaeycZfeoyruKQzUgNg==}
+
+  openid-client@5.6.4:
+    resolution: {integrity: sha512-T1h3B10BRPKfcObdBklX639tVz+xh34O7GjofqrqiAQdm7eHsQ00ih18x6wuJ/E6FxdtS2u3FmUGPDeEcMwzNA==}
 
   ora@8.1.1:
     resolution: {integrity: sha512-YWielGi1XzG1UTvOaCFaNgEnuhZVMSHYkW/FQ7UX8O26PtlpdM84c0f7wLPlkvx2RfiQmnzd61d/MGxmpQeJPw==}
@@ -1456,6 +1497,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  set-cookie-parser@2.7.1:
+    resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
+
   sharp@0.33.5:
     resolution: {integrity: sha512-haPVm1EkS9pgvHrQ/F3Xy+hgcuMV0Wm9vfIBSiwZ05k+xgb0PkBQpGsAA/oWdDobNaZTH5ppvHtzCFbnSEwHVw==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -1482,6 +1526,43 @@ packages:
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
+  sst-darwin-arm64@3.3.41:
+    resolution: {integrity: sha512-tR1Na95x1VHY8n9LbRzH+MLDcLCBfesGtA5lg+TXNbr2yllP0VkdhdeEnEfK9nFBhig7B4+fPRUxVVdDOPLcoQ==}
+    cpu: [arm64]
+    os: [darwin]
+
+  sst-darwin-x64@3.3.41:
+    resolution: {integrity: sha512-gdg0wzbhG3s3e+JRrIEi1YPgATSHnt56+tsBnT32TaMJt3q1ijw8+i0068oKEh3wvCBIIfsvMf18VkGi3XKe9g==}
+    cpu: [x64]
+    os: [darwin]
+
+  sst-linux-arm64@3.3.41:
+    resolution: {integrity: sha512-cFcjiX7bbD3WdIvgdfiYeZCee3nSXcCXc+HT37jvKHwhtNVJRBZaF8XdK9MkzOOmaie7zEiQKjZqVO3VN6EAHQ==}
+    cpu: [arm64]
+    os: [linux]
+
+  sst-linux-x64@3.3.41:
+    resolution: {integrity: sha512-RPiqmdkpZ3L9P+coqtfFchMx3DcYDJEZ/XnMSOq9QFIPq+5DYlzD9XRNTmeribQKtMvvnHn/x27BH4r0WU4Rbw==}
+    cpu: [x64]
+    os: [linux]
+
+  sst-linux-x86@3.3.41:
+    resolution: {integrity: sha512-FygjCCUsCk0K9biXN1TUEEfdtCmFeWuWud3dmaVU7DBAS+2KLkaGQxtYz0UFPbGQDDZcJPrla3CtcrWRnsYhVQ==}
+    cpu: [x86]
+    os: [linux]
+
+  sst@3.3.41:
+    resolution: {integrity: sha512-SWz6sBnqlNzRSJgE6CBHJkvb2DCw8DYny6MEjvKRI0Wf8sHm9l+ZQ4R/ShsF5p1oE1g2PWTnIZLIHO7rGX7SvQ==}
+    hasBin: true
+    peerDependencies:
+      hono: 4.x
+      valibot: 0.30.x
+    peerDependenciesMeta:
+      hono:
+        optional: true
+      valibot:
+        optional: true
 
   stdin-discarder@0.2.2:
     resolution: {integrity: sha512-UhDfHmA92YAlNnCfhmq0VeNL5bDbiZGg7sZ2IvPsXubGkiNa9EC+tUTsjBRsYUAz87btI6/1wf4XoVvQ3uRnmQ==}
@@ -1554,6 +1635,10 @@ packages:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
+
+  undici@5.28.4:
+    resolution: {integrity: sha512-72RFADWFqKmUb2hmmvNODKL3p9hcB6Gt2DOQMis1SEBaV6a4MH8soBvzg+95CYhCKPFedut2JY9bMfrDl9D23g==}
+    engines: {node: '>=14.0'}
 
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
@@ -1778,6 +1863,9 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
+  yallist@4.0.0:
+    resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
+
   yaml-language-server@1.15.0:
     resolution: {integrity: sha512-N47AqBDCMQmh6mBLmI6oqxryHRzi33aPFPsJhYy3VTUGCdLHYjGh4FZzpUjRlphaADBBkDmnkM/++KNIOHi5Rw==}
     hasBin: true
@@ -1903,6 +1991,10 @@ snapshots:
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
+
+  '@astrojs/webapi@3.0.0':
+    dependencies:
+      undici: 5.28.4
 
   '@astrojs/yaml2ts@0.2.2':
     dependencies:
@@ -2124,6 +2216,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@fastify/busboy@2.1.1': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -2450,6 +2544,11 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
+  astro-sst@2.43.5:
+    dependencies:
+      '@astrojs/webapi': 3.0.0
+      set-cookie-parser: 2.7.1
+
   astro@4.16.16(rollup@4.28.0)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
@@ -2528,6 +2627,8 @@ snapshots:
       - supports-color
       - terser
       - typescript
+
+  aws4fetch@1.0.20: {}
 
   axobject-query@4.1.0: {}
 
@@ -2901,6 +3002,10 @@ snapshots:
     dependencies:
       is-inside-container: 1.0.0
 
+  jose@4.15.9: {}
+
+  jose@5.2.3: {}
+
   js-tokens@4.0.0: {}
 
   js-yaml@3.14.1:
@@ -2951,6 +3056,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lru-cache@6.0.0:
+    dependencies:
+      yallist: 4.0.0
 
   magic-string@0.30.14:
     dependencies:
@@ -3300,6 +3409,10 @@ snapshots:
 
   node-releases@2.0.18: {}
 
+  object-hash@2.2.0: {}
+
+  oidc-token-hash@5.0.3: {}
+
   onetime@7.0.0:
     dependencies:
       mimic-function: 5.0.1
@@ -3309,6 +3422,13 @@ snapshots:
       emoji-regex-xs: 1.0.0
       regex: 5.0.2
       regex-recursion: 4.3.0
+
+  openid-client@5.6.4:
+    dependencies:
+      jose: 4.15.9
+      lru-cache: 6.0.0
+      object-hash: 2.2.0
+      oidc-token-hash: 5.0.3
 
   ora@8.1.1:
     dependencies:
@@ -3553,6 +3673,8 @@ snapshots:
 
   semver@7.6.3: {}
 
+  set-cookie-parser@2.7.1: {}
+
   sharp@0.33.5:
     dependencies:
       color: 4.2.3
@@ -3603,6 +3725,33 @@ snapshots:
   space-separated-tokens@2.0.2: {}
 
   sprintf-js@1.0.3: {}
+
+  sst-darwin-arm64@3.3.41:
+    optional: true
+
+  sst-darwin-x64@3.3.41:
+    optional: true
+
+  sst-linux-arm64@3.3.41:
+    optional: true
+
+  sst-linux-x64@3.3.41:
+    optional: true
+
+  sst-linux-x86@3.3.41:
+    optional: true
+
+  sst@3.3.41:
+    dependencies:
+      aws4fetch: 1.0.20
+      jose: 5.2.3
+      openid-client: 5.6.4
+    optionalDependencies:
+      sst-darwin-arm64: 3.3.41
+      sst-darwin-x64: 3.3.41
+      sst-linux-arm64: 3.3.41
+      sst-linux-x64: 3.3.41
+      sst-linux-x86: 3.3.41
 
   stdin-discarder@0.2.2: {}
 
@@ -3661,6 +3810,10 @@ snapshots:
       semver: 7.6.3
 
   typescript@5.7.2: {}
+
+  undici@5.28.4:
+    dependencies:
+      '@fastify/busboy': 2.1.1
 
   unified@11.0.5:
     dependencies:
@@ -3885,6 +4038,8 @@ snapshots:
   y18n@5.0.8: {}
 
   yallist@3.1.1: {}
+
+  yallist@4.0.0: {}
 
   yaml-language-server@1.15.0:
     dependencies:

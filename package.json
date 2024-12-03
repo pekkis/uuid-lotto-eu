@@ -3,14 +3,16 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "astro": "astro",
     "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "astro dev",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^4.16.16",
     "@astrojs/check": "^0.9.4",
+    "astro": "^4.16.16",
+    "astro-sst": "2.43.5",
+    "sst": "3.3.41",
     "typescript": "^5.7.2"
   },
   "packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
