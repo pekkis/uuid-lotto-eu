@@ -29,7 +29,7 @@ jobs:
 
       - name: Deploy
         run: |
-          pnpx sts deploy --stage ${{ steps.slugify.outputs.branch-name-slug }}
+          pnpx sst deploy --stage ${{ steps.slugify.outputs.branch-name-slug }}
 
       - name: List files in the repository
         run: |
